@@ -18,3 +18,12 @@ const sentence = 'Hello, world!';
 console.log(sentence.indexOf('world')); // Outputs: 7
 console.log(sentence.indexOf('world', 8)); // Outputs: -1 (not found)
 console.log(sentence.indexOf('foo')); // Outputs: -1 (not found)
+
+
+function greet() {
+    console.log('Hello, ' + this.name);
+  }
+  
+  const person = { name: 'John' };
+  greet.call(person); // Outputs: Hello, John
+  
